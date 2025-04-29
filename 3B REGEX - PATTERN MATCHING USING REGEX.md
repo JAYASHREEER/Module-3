@@ -1,29 +1,34 @@
 # Exp.No:3b  
 ## REGEX - PATTERN MATCHING USING REGEX
 
----
-
 ### AIM  
-To write a Python program that matches a string containing an `'a'` followed by **two to three `'b'` characters** using regular expressions.
-
----
+To write a Python program that matches a string that begins with an `'a'` followed by **zero or more `'b'` characters** using regular expressions.
 
 ### ALGORITHM
-
-1. Begin the program.  
-2. Accept a string `str1` from the user.  
-3. Define the regular expression pattern as `r"[a]+b{2,3}"`.  
-4. Use the `re.match()` function to check if the string `str1` matches the pattern.  
-5. If a match is found, print `"Found a match!"`.  
-6. If no match is found, print `"Not matched!"`.  
-7. Terminate the program.
-
----
+1.Start the program.
+2.Import the re module to use regular expressions.
+3.Define a function match_ab_pattern(input_string) to:
+Create a regular expression pattern ^ab*$ which matches:
+A string that starts with 'a'
+Followed by zero or more 'b' characters
+And contains only these characters
+Use re.fullmatch() to check if the entire string matches the pattern.
+Return "Match found" if it matches, otherwise return "No match".
+4.Test the function with various input strings.
+5.Display whether each string matches the pattern or not.
+6.End the program.
 
 ### PROGRAM
+import re
+str=input()
+x=re.match("^a(b*)$",str)
+if x:
+    print("Found a match!")
+else:
+    print("Not matched!")
 
-```
-```
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/0cf300e2-f167-45a6-982f-32dc80c648b2)
 
 ### RESULT
+Thus, Python program that matches a string that begins with an `'a'` followed by **zero or more `'b'` characters** using regular expressions was implemented and successfully executed.
